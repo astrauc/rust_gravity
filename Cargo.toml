@@ -9,10 +9,10 @@ inherits="release"
 
 [dependencies]
 cxx = "1.0.158"
-dyn-clone = "1.0.19"
 protobuf = "3.7.2"
 spdlog-rs = "0.4.3"
 
 
 [build-dependencies]
 cxx-build = "1.0.158"
+cmake = "0.1"
