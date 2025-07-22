@@ -40,9 +40,12 @@ fn main() {
     
     // search and link the libraries created
     // note the *_d. This is what the cmake crate does, but it should not matter the name
-    println!("cargo::rustc-link-search={}", lib_path.display());
+    println!("cargo:rustc-link-search={}", lib_path.display());
     println!("cargo:rustc-link-lib=gravity_protobufs_d");
     println!("cargo:rustc-link-lib=gravity_d");
+    println!("cargo:rustc-link-lib=protobuf");
+    println!("cargo:rustc-link-lib=zmq");
+
 
     // cargo run will add this to the library path. 
     // If you cargo build then run your binary it might not work
